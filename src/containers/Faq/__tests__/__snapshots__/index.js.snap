@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Faq Standard Render Container ~~ Snapshot ~~ +++capturing Snapshot with 1`] = `
+<Layout>
+  <div>
+    <h1>
+      FAQ PAGE
+    </h1>
+  </div>
+</Layout>
+`;

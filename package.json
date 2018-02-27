@@ -1,0 +1,52 @@
+{
+  "name": "new-project-name",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.7.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.6",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-saga": "^0.16.0",
+    "styled-components": "^3.1.6"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "eslint": "4.18.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.6.1",
+    "eslint-plugin-styled-components-config": "^0.0.2",
+    "lint-staged": "^6.1.1",
+    "mocha": "^5.0.1",
+    "nock": "^9.1.9",
+    "pre-commit": "^1.2.2",
+    "react-scripts": "1.1.1",
+    "redux-saga-tester": "^1.0.379",
+    "sinon": "^4.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "tests": "mocha -r **/**/*.test.ts",
+    "eject": "react-scripts eject",
+    "lint": "npm run lint:js",
+    "lint:staged": "lint-staged",
+    "lint:js": "eslint --ext .js src/"
+  },
+  "pre-commit": "lint:staged",
+  "lint-staged": {
+    "*.js": "lint:js"
+  },
+  "proxy": "https://httpbin.org"
+}

@@ -1,0 +1,83 @@
+/*
+ * Colors
+ */
+const WHITE = '#FFF';
+const DARKBLUE = '#303E47';
+const GRAY = '#C5C7C8';
+const LIGHTGRAY = '#EDEDED';
+const PRIMARY_NAVY = '#313d48';
+const PRIMARY_NAVY_LIGHT = '#989ea3';
+const PRIMARY_NAVY_X_LIGHT = '#cbced1';
+const PRIMARY_NAVY_XX_LIGHT = '#f4f5f6';
+const PRIMARY_GREEN = '#84c446';
+const PRIMARY_GREEN_LIGHT = '#bfe1a3';
+const PRIMARY_GREEN_X_LIGHT = '#dff0d1';
+const PRIMARY_ORANGE = '#f68000';
+const PRIMARY_ORANGE_LIGHT = '#f9bc95';
+const PRIMARY_ORANGE_X_LIGHT = '#fcddca';
+const ERROR_RED = '#ff2d44';
+const ERROR_RED_LIGHT = '#ff96a1';
+const ERROR_RED_X_LIGHT = '#ffcad0';
+const DARKGRAY = '#303e47';
+const BACKGROUNDGRAY = '#f7f7f8';
+
+export const COLORS = {
+  PRIMARY: DARKBLUE,
+  SECONDARY: PRIMARY_GREEN,
+  BODY: WHITE,
+  CONTENT: WHITE,
+  HEADER: WHITE,
+  TEXT: DARKBLUE,
+
+  DARKBLUE,
+  GRAY,
+  LIGHTGRAY,
+  WHITE,
+  PRIMARY_NAVY,
+  PRIMARY_NAVY_LIGHT,
+  PRIMARY_NAVY_X_LIGHT,
+  PRIMARY_NAVY_XX_LIGHT,
+  PRIMARY_GREEN,
+  PRIMARY_GREEN_LIGHT,
+  PRIMARY_GREEN_X_LIGHT,
+  PRIMARY_ORANGE,
+  PRIMARY_ORANGE_LIGHT,
+  PRIMARY_ORANGE_X_LIGHT,
+  ERROR_RED,
+  ERROR_RED_LIGHT,
+  ERROR_RED_X_LIGHT,
+  DARKGRAY,
+  BACKGROUNDGRAY,
+};
+
+export const LAYOUT = {
+  HEADERHEIGHT: 84,
+  MOBILE_HEADERHEIGHT: 45,
+  MAXWIDTH: 1440,
+  GUTTER: 20,
+  H_SPACING: 50,
+  CUSTOMIZE_PRODUCT_DETAIL_WIDTH: 350,
+};
+
+/*
+ * Fonts
+ */
+export const FONTS = {
+  PRIMARY: '"AvenirLT-Book", "Arial", "Helvetica"',
+  PRIMARY_MEDIUM: '"AvenirLT-Medium", "Arial", "Helvetica"',
+  PRIMARY_BOLD: '"AvenirLT-Heavy", "Arial", "Helvetica"',
+  SECONDARY: '"CaeciliaLTPro-85Heavy", "Times", "serif"',
+  SECONDARY_ITALIC: '"CaeciliaLTPro-86HeavyItalic", "Times", "serif"',
+};
+
+export const ORDER = {
+  MOBILE_ACCOUNT_NAV: 16,
+  LOADING: 15,
+  CUSTOMIZE: 14,
+  CART: 13,
+  SKIP_TO_CONTENT: 12,
+  STORE_DETAIL: 11,
+  HEADER: 10,
+  MENU: 9,
+  MAP: 8,
+};

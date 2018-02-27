@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Layout Standard Render Component ~~ Snapshot ~~ +++capturing Snapshot with 1`] = `
+<div>
+  <Nav />
+  <styled.div>
+    <div>
+      Test
+    </div>
+  </styled.div>
+</div>
+`;

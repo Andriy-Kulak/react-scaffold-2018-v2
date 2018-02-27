@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Home Standard Render Container ~~ Snapshot ~~ +++capturing Snapshot with 1`] = `
+<Layout>
+  <styled.div>
+    <styled.div>
+      <h2>
+        Welcome to React
+      </h2>
+    </styled.div>
+    <p
+      className="app-intro"
+    >
+      To get started, edit 
+      <code>
+        src/App.js
+      </code>
+       and save to reload.
+    </p>
+    <styled.div
+      className="app-intro"
+    >
+      Your IP is: 
+    </styled.div>
+  </styled.div>
+</Layout>
+`;

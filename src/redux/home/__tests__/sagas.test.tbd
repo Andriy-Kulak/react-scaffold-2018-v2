@@ -1,0 +1,76 @@
+/* eslint-env node, jest, mocha */
+
+// import sinon from 'sinon';
+// import * as api from './api';
+import nock from 'nock';
+import * as chai from 'chai';
+// import { runSaga } from 'redux-saga';
+import SagaTester from 'redux-saga-tester';
+import appSagas from '../sagas';
+import { getAPIDataLoaded } from '../actions';
+import { GET_API_DATA, GET_API_DATA_LOADED } from '../constants';
+// apiData
+
+
+// const dispatched = [];
+
+// const saga = runSaga({
+//   dispatch: (action) => dispatched.push(action),
+//   getState: () => ({ value: 'test' }),
+// }, callApi, 'http://url');
+
+// test('saga test', async (assert) => {
+//   const dispatched = [];
+//   sinon.stub('/get', 'fetchData').callsFake(() => ({
+//     json: () => ({
+//       some: 'value'
+//     })
+//   }));
+//   const url = 'https://localhost:3000/get';
+//   const result = await runSaga({
+//     dispatch: (action) => dispatched.push(action),
+//     getState: () => ({ state: 'test' }),
+//   }, fetchData, url).done;
+//   console.log('RESSSSSSSS ----------->', result);
+
+//   assert.true(fetchData.calledWith(url, ({ method: 'get' })));
+//   assert.deepEqual(dispatched, [{ some: 'value' }]);
+// });
+// chai.config.truncateThreshold = 0;
+
+describe('example.nock.js', () => {
+  // before(() => {
+  //   nock.disableNetConnect();
+  // });
+  it('showcases using saga tester with a saga that fetches data and returns a resulting action', async () => {
+    // nock.emitter.on('no match', (req) => {
+    //   fs.appendFile('record.txt', req);
+    // });
+
+    // const appendLogToFile = (content) => {
+    //   fs.appendFile('record.txt', content);
+    // }
+    nock.recorder.rec();
+
+    const fetchReply = { result: { value: 'SOME_VALUE' } };
+    // Setup Nock
+    nock('https://localhost:3000')
+      .get('/get')
+      .reply(200, { fetchReply });
+
+    // Start up the saga tester
+    const sagaTester = new SagaTester({});
+
+    sagaTester.start(appSagas);
+
+    // Dispatch the event to start the saga
+    sagaTester.dispatch({ type: GET_API_DATA });
+
+    // Hook into the success action
+    await sagaTester.waitFor(GET_API_DATA_LOADED);
+
+    // console.log('sagaTester.getLatestCalledAction(', sagaTester.getLatestCalledAction());
+    // Check the resulting action
+    expect(sagaTester.getLatestCalledAction()).to.deep.equal(getAPIDataLoaded(fetchReply));
+  });
+});

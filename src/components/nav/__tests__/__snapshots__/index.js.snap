@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Nav Standard Render Component ~~ Snapshot ~~ +++capturing Snapshot with 1`] = `
+<styled.nav>
+  <styled.div>
+    <Link
+      href="/"
+      replace={false}
+      to="/"
+    >
+      <img
+        alt="Veggie Grill"
+        src="logo.svg"
+      />
+    </Link>
+  </styled.div>
+  <styled.div>
+    <Link
+      href="/"
+      replace={false}
+      to="/"
+    >
+      HOME
+    </Link>
+  </styled.div>
+  <styled.div>
+    <Link
+      href="/faq"
+      replace={false}
+      to="/faq"
+    >
+      FAQ PAGE
+    </Link>
+  </styled.div>
+</styled.nav>
+`;
